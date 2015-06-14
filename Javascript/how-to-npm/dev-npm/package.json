@@ -1,0 +1,27 @@
+{
+  "name": "@oscavi/dev-npm",
+  "version": "1.0.0",
+  "description": "Only for testing",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "author": "oscavi",
+  "license": "ISC",
+  "dependencies": {
+    "@linclark/pkg": "^1.0.2"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oscavi/hello-world.git"
+  },
+  "keywords": [
+    "test",
+    "tutorial"
+  ],
+  "bugs": {
+    "url": "https://github.com/oscavi/hello-world/issues"
+  },
+  "homepage": "https://github.com/oscavi/hello-world#readme"
+}
