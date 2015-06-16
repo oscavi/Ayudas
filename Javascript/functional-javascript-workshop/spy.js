@@ -1,16 +1,25 @@
-var xinspect = require('./xinspect')
-
 function Spy(target, method) {
-  target[method].bind("sdf")
-  console.log(xinspect(target,''))
+  var originalFunction = target[method]
 
-
+  var result = {
+    count: 0
   }
 
-   module.exports = Spy
-var spy = Spy(console,"log")
-console.log("hola")
-console.log("hola")
-//Spy(console,"log")
+  // replace method with spy method
+  target[method] = function() {
+    result.count+=1 // track function was called
+    return originalFunction.apply(this, arguments) // invoke original function
+  }
 
-//console.log(spy.count)
+  return result
+}
+
+module.exports = Spy
+
+/*
+
+var spy= Spy(console,"log")
+
+console.log("");
+console.log(spy.count)
+*/
