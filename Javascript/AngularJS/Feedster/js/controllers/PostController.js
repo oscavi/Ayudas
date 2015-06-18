@@ -8,7 +8,8 @@ app.controller('PostController', ['$scope', function($scope) {
       comment: {
         img: 'img/dog.jpg',
         text: 'How much for that dogg in the window?'
-      }
+      },
+      like:0
     },
 
 
@@ -19,7 +20,8 @@ app.controller('PostController', ['$scope', function($scope) {
       },
       comment: {
         text: 'I used to have a recurring dream when I was younger.'
-      }
+      },
+      like:0
     }
   ]
 }]);

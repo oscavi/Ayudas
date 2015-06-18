@@ -19,11 +19,12 @@
       </div>
     </div>
 
-    <div class="posts">
-      <div class="container">
+    <div class="posts" ng-controller="PostController">
+      <div class="container" >
 
-        <div class="post" ng-controller = "PostController">
-          <feedster-post ng-repeat="post in posts" post="post"></feedster-post>
+        <div class="post" ng-repeat="post in posts">
+          <feedster-post post="post" >  </feedster-post>
+          <plus-one></plus-one>
         </div>
 
       </div>
@@ -38,6 +39,7 @@
 
     <!-- Directives -->
     <script src="js/directives/feedsterPost.js"></script>
+    <script src="js/directives/plusOne.js"></script>
 
   </body>
 </html>

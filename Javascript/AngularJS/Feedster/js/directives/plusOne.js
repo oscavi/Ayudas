@@ -1,9 +1,12 @@
 app.directive('plusOne', function() {
   return {
     restrict: 'E',
-    scope: {
-      post: '='
-    },
-    templateUrl: 'js/directives/plusOne.html'
-  };
+    scope: {},
+    templateUrl: 'js/directives/plusOne.html',
+    link: function(scope, element, attrs) {
+      scope.like = function() {
+        element.toggleClass('btn-like');
+    }
+   }
+  }
 });
